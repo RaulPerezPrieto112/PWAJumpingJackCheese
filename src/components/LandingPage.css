@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  overflow: hidden; /* 🔥 Esto desactiva el scroll */
+  height: 100vh;
+}
+
+
+.landing-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.landing-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link, .landing-contact-button {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .landing-contact-button:hover {
+  color: #4b0082;
+}
+
+.landing-contact-button {
+  background-color: #4b0082;
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .section-content {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+} */
+
+.text-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.image-content {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-image {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.landing-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-button:hover {
+  background-color: white;
+  color: #000;
+}
+
+
+
+/*sections cuadrado blanco*/
+
+
+
+
+
+
+/* General */
+.landing-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fondo de video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3; /* Ajusta la transparencia del video */
+  filter: brightness(100%) contrast(110%); /* 🔥 Ajusta la claridad */
+}
+
+
+/* Secciones */
+.landing-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 50px 0; /* Espaciado entre secciones */
+}
+
+.section-content {
+  background: rgba(255, 255, 255, 0.75); /* Antes era 0.85, ahora más transparente */
+  padding: 10px 40px; /* Mantiene el ajuste de altura */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+/* Ajuste del contenido */
+.text-content {
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ajuste de la imagen */
+.image-content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste de imágenes */
+.section-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Video dentro de la sección */
+.video-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+/* Alternar el orden de imagen y texto en secciones impares */
+.landing-section:nth-child(odd) .section-content {
+  flex-direction: row-reverse;
+}
+
+/* Botón de descarga */
+.download-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffcc00;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.download-button:hover {
+  background: #ff9900;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .section-content {
+    width: 90%;
+    flex-direction: column; /* Apila texto e imagen en móviles */
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .text-content,
+  .image-content {
+    width: 100%;
+  }
+
+  .landing-section {
+    margin: 30px 0; /* Espaciado menor en pantallas pequeñas */
+  }
+}
+
+
+
+.logout-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
+
+.landing-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre "Cheese Lab" y "Bienvenido: correo" */
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Asegurar que el texto de bienvenida se vea */
+.welcome-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b0082; /* Color amarillo oro */
+}
