@@ -11,6 +11,7 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  base: "/PWAJumpingJackCheese/", // 👈 Cambia esto por el nombre de tu repositorio en GitHub
   plugins: [
     react(),
     VitePWA({
