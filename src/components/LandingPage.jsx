@@ -262,7 +262,7 @@ const LandingPage = () => {
               <h1 className="landing-title">Descargar</h1>
               <p className="landing-description">¿Estás listo para sumergirte en un juego divertido, adictivo y sobre todo... ¡Entretenido!?</p>
               {userEmail ? (
-                <a href="https://mega.nz/file/62pmDDKS#thrf6CZHPLYC5MEeWKceH3K3ahNawYxodFdMPj_3va8/direct" className="download-button">
+                <a href="https://mega.nz/file/674GEYaS#VG9cO2jdcAtDhHmYp0wNddLaVNZ7SeaXZpLlQUjogLg" className="download-button">
                   Download Game (.rar)
                 </a>
               ) : (
